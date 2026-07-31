@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<!--
+╔══════════════════════════════════════════════════════════════════════╗
+║         Onyx & Oak — النسخة النهائية الجاهزة للبيع v3.0            ║
+║         Single-File · Self-Contained · Turnkey Digital Product      ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  🚀 للمشتري: كل ما تحتاجه في خطوة واحدة فقط:                      ║
+║     ابحث عن قسم SITE_CONFIG أدناه وعدّل القيم الخمس               ║
+╚══════════════════════════════════════════════════════════════════════╝
+-->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- SEO — تُحدَّث تلقائياً من SITE_CONFIG -->
+<title id="meta-title">Onyx &amp; Oak — أثاث خشبي فاخر مصنوع يدوياً</title>
+<meta id="meta-desc" name="description" content="نُحوّل الخشب الطبيعي إلى تحف منزلية خالدة — تصاميم مخصصة، خامات مستدامة، وتشطيب يدوي بمعايير عالمية."/>
+<meta name="robots" content="index, follow"/>
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website"/>
+<meta id="og-url"   property="og:url"         content=""/>
+<meta id="og-title" property="og:title"        content="Onyx &amp; Oak — أثاث خشبي فاخر"/>
+<meta id="og-desc"  property="og:description"  content="نُحوّل الخشب الطبيعي إلى تحف منزلية خالدة"/>
+<meta id="og-img"   property="og:image"        content=""/>
+<meta property="og:locale" content="ar_SA"/>
+<meta id="og-sitename" property="og:site_name" content="Onyx &amp; Oak"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: {
+        forest:'#1F2E23', oak:'#C28E5C', cream:'#F7F4EE', charcoal:'#2B2A28'
+      },
+      fontFamily: {
+        serif:['"Playfair Display"','Georgia','serif'],
+        sans:['"Tajawal"','system-ui','sans-serif']
+      }
+    }}
+  }
+</script>
+
+<style>
+/* ══ RESET ══ */
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:#F7F4EE;color:#2B2A28;direction:rtl;-webkit-font-smoothing:antialiased}
+
+/* ══ HEADER ══ */
+#hdr{transition:box-shadow .3s,background .3s}
+#hdr.up{box-shadow:0 2px 24px rgba(31,46,35,.1);background:rgba(247,244,238,.97);backdrop-filter:blur(10px)}
+
+/* ══ REVEAL ══ */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:translateY(0)}
+
+/* ══ CARDS ══ */
+.pc{transition:transform .32s cubic-bezier(.22,.68,0,1.2),box-shadow .32s}
+.pc:hover{transform:translateY(-6px);box-shadow:0 22px 52px rgba(31,46,35,.15)}
+.pc:hover .ci{transform:scale(1.07)}
+.ci{transition:transform .42s ease}
+
+/* ══ BUTTONS ══ */
+.b-dark{background:#1F2E23;color:#F7F4EE;border:2px solid #1F2E23;display:inline-block;text-align:center;cursor:pointer;font-family:'Tajawal',sans-serif;transition:background .22s,color .22s,border-color .22s,transform .14s}
+.b-dark:hover{background:#C28E5C;border-color:#C28E5C;color:#fff}
+.b-dark:active{transform:scale(.97)}
+.b-dark:disabled{opacity:.55;pointer-events:none}
+
+.b-out{background:transparent;color:#1F2E23;border:2px solid #1F2E23;display:inline-block;text-align:center;cursor:pointer;font-family:'Tajawal',sans-serif;transition:background .22s,color .22s,transform .14s}
+.b-out:hover{background:#1F2E23;color:#F7F4EE}
+.b-out:active{transform:scale(.97)}
+
+.b-oak{background:#C28E5C;color:#fff;border:2px solid #C28E5C;display:inline-block;text-align:center;cursor:pointer;font-family:'Tajawal',sans-serif;transition:background .22s,border-color .22s,transform .14s}
+.b-oak:hover{background:#1F2E23;border-color:#1F2E23}
+.b-oak:active{transform:scale(.97)}
+
+.b-oak-o{background:transparent;color:#C28E5C;border:2px solid #C28E5C;display:inline-block;text-align:center;cursor:pointer;font-family:'Tajawal',sans-serif;transition:background .22s,color .22s,transform .14s}
+.b-oak-o:hover{background:#C28E5C;color:#fff}
+
+/* ══ NAV UNDERLINE RTL ══ */
+.nl{position:relative}
+.nl::after{content:'';position:absolute;bottom:-2px;right:0;width:0;height:1.5px;background:#C28E5C;transition:width .25s}
+.nl:hover::after{width:100%}
+
+/* ══ WOOD GRADIENTS (placeholders until real images loaded) ══ */
+.wa{background:linear-gradient(135deg,#8B6645 0%,#A0794F 40%,#C28E5C 70%,#D4A574 100%)}
+.wb{background:linear-gradient(135deg,#4A3728 0%,#6B4E35 50%,#8B6645 100%)}
+.wc{background:linear-gradient(135deg,#5C4033 0%,#7A5A40 40%,#A0794F 80%,#C28E5C 100%)}
+.wd{background:linear-gradient(135deg,#2B1E12 0%,#4A3020 50%,#6B4838 100%)}
+.we{background:linear-gradient(135deg,#6B4E35 0%,#8B6645 50%,#C28E5C 100%)}
+
+/* ══ IMAGE SLOTS ══ */
+.slot{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+
+/* grain overlay */
+.gr::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(255,255,255,.04) 3px,rgba(255,255,255,.04) 4px)}
+
+/* ══ MISC ══ */
+.stars{color:#C28E5C;font-size:18px;letter-spacing:3px}
+.divider{width:52px;height:3px;background:#C28E5C;border-radius:2px}
+.ficon{width:52px;height:52px;border-radius:50%;background:rgba(194,142,92,.14);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tc{border-right:3px solid #C28E5C;border-left:none}
+
+/* ══ MOBILE MENU ══ */
+#mm{transition:max-height .35s ease,opacity .3s;max-height:0;opacity:0;overflow:hidden}
+#mm.open{max-height:480px;opacity:1}
+
+/* inputs */
+input,textarea,select{font-family:'Tajawal',sans-serif}
+input:focus,textarea:focus,select:focus{outline:2px solid #C28E5C;outline-offset:2px}
+
+/* ══ WHATSAPP BUTTON ══ */
+#wa{position:fixed;bottom:26px;left:26px;z-index:900;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.45);transition:transform .25s cubic-bezier(.22,.68,0,1.4),box-shadow .25s;animation:wap 2.8s ease-in-out infinite}
+#wa:hover{transform:scale(1.12);box-shadow:0 10px 32px rgba(37,211,102,.65);animation:none}
+#wa .tip{position:absolute;left:68px;bottom:50%;transform:translateY(50%);background:#1F2E23;color:#F7F4EE;font-size:12px;font-weight:500;white-space:nowrap;padding:6px 12px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s;font-family:'Tajawal',sans-serif}
+#wa:hover .tip{opacity:1}
+@keyframes wap{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4)}50%{box-shadow:0 6px 36px rgba(37,211,102,.72)}}
+
+/* ══ MODALS ══ */
+.ov{position:fixed;inset:0;z-index:1000;background:rgba(31,46,35,.65);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:16px}
+.ov.open{display:flex}
+.mb{background:#F7F4EE;border-radius:20px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:40px 32px 32px;position:relative;direction:rtl;text-align:right;box-shadow:0 24px 64px rgba(31,46,35,.28)}
+.mb h2{font-family:'Tajawal',sans-serif;font-size:1.4rem;font-weight:700;color:#1F2E23;margin-bottom:6px}
+.mb .md{width:40px;height:3px;background:#C28E5C;border-radius:2px;margin-bottom:22px}
+.mb h3{font-family:'Tajawal',sans-serif;font-size:.95rem;font-weight:700;color:#1F2E23;margin:22px 0 6px}
+.mb p,.mb li{font-size:.875rem;color:#2B2A28;line-height:1.9;font-weight:300}
+.mb ul{padding-right:18px;list-style:disc}
+.mc{position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:50%;background:#1F2E23;color:#F7F4EE;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .2s;line-height:1}
+.mc:hover{background:#C28E5C}
+
+/* ══ SETUP MODAL SPECIFIC ══ */
+.cfg-row{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.cfg-row label{font-size:12px;font-weight:600;color:#1F2E23;letter-spacing:.06em;text-transform:uppercase}
+.cfg-row input{background:#fff;border:1.5px solid rgba(194,142,92,.3);border-radius:10px;padding:10px 14px;font-size:13px;color:#2B2A28;font-family:'Tajawal',sans-serif;transition:border-color .2s}
+.cfg-row input:focus{border-color:#C28E5C;outline:none}
+.cfg-row small{font-size:11px;color:#2B2A28;opacity:.45;font-weight:300}
+
+/* ══ FORM SPINNER ══ */
+.spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(247,244,238,.4);border-top-color:#F7F4EE;border-radius:50%;animation:sp .7s linear infinite;vertical-align:middle;margin-right:8px}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* ══ SETUP BADGE ══ */
+#setup-badge{position:fixed;bottom:94px;left:26px;z-index:890;background:#1F2E23;color:#F7F4EE;border:none;border-radius:12px;padding:8px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Tajawal',sans-serif;box-shadow:0 4px 16px rgba(31,46,35,.3);transition:background .2s,transform .15s;white-space:nowrap;display:flex;align-items:center;gap:6px}
+#setup-badge:hover{background:#C28E5C;transform:translateY(-2px)}
+#setup-badge svg{flex-shrink:0}
+
+@media(prefers-reduced-motion:reduce){.rv,.pc,.ci,.b-dark,.b-out,.b-oak,#wa{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     ⚙️  SITE_CONFIG — كل ما يحتاجه المشتري في مكان واحد
+     ══════════════════════════════════════════════════════════════ -->
+<script>
+const SITE_CONFIG = {
+
+  /* ─── 1. اسم العلامة التجارية ─── */
+  SITE_NAME: "Onyx & Oak",
+
+  /* ─── 2. واتساب: الرقم بالصيغة الدولية بدون + أو مسافات ─── */
+  WHATSAPP_NUMBER: "966549949023",
+
+  /* ─── 3. Formspree: سجّل على formspree.io واحصل على معرّفك ─── */
+  FORMSPREE_ID: "YOUR_FORM_ID",
+
+  /* ─── 4. روابط السوشيال ميديا (ضع # إذا لم يكن لديك) ─── */
+  INSTAGRAM_URL: "#",
+  SNAPCHAT_URL:  "#",
+  TWITTER_URL:   "#",
+
+  /* ─── 5. نطاق الموقع (بدون / في النهاية) ─── */
+  SITE_URL: "https://onyxandoak.sa",
+
+  /* ─── 6. صور المنتجات (Unsplash افتراضية — استبدلها بصورك) ─── */
+  IMAGES: {
+    hero_main:   "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80",  /* طاولة كبيرة */
+    hero_panel:  "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=500&q=80", /* ألواح جدارية */
+    hero_shelf:  "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=500&q=80", /* أرفف */
+    hero_banner: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=1200&q=80",/* بانر خشب */
+    about:       "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&q=80", /* ورشة */
+    card1:       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",   /* طاولة سفرة */
+    card2:       "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800&q=80", /* ألواح */
+    card3:       "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80", /* أرفف */
+    card4:       "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",   /* خزانة */
+    card5:       "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800&q=80", /* طاولة قهوة */
+  }
+};
+
+/* ══ AUTO-APPLY CONFIG ══════════════════════════════════════════
+   يُطبَّق عند تحميل الصفحة — لا تحتاج لتعديل أي شيء آخر
+   ═══════════════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ── اسم الموقع ── */
+  document.querySelectorAll('.js-sitename').forEach(el => el.textContent = SITE_CONFIG.SITE_NAME);
+
+  /* ── واتساب: زر العائم + أزرار النموذج ── */
+  const waMsg = encodeURIComponent(`مرحباً ${SITE_CONFIG.SITE_NAME}، أرغب بالاستفسار عن التصميم والتفصيل الخشب.`);
+  const waUrl = `https://wa.me/${SITE_CONFIG.WHATSAPP_NUMBER}/?text=${waMsg}`;
+  document.querySelectorAll('.js-wa').forEach(el => el.href = waUrl);
+
+  /* ── Formspree ── */
+  const form = document.getElementById('quote-form');
+  if (form && SITE_CONFIG.FORMSPREE_ID !== 'YOUR_FORM_ID') {
+    form.action = `https://formspree.io/f/${SITE_CONFIG.FORMSPREE_ID}`;
+  }
+
+  /* ── سوشيال ── */
+  const soc = { instagram: SITE_CONFIG.INSTAGRAM_URL, snapchat: SITE_CONFIG.SNAPCHAT_URL, twitter: SITE_CONFIG.TWITTER_URL };
+  Object.entries(soc).forEach(([k,v]) => {
+    document.querySelectorAll(`.js-${k}`).forEach(el => { if(v !== '#') el.href = v; });
+  });
+
+  /* ── SEO meta ── */
+  document.getElementById('meta-title').textContent = `${SITE_CONFIG.SITE_NAME} — أثاث خشبي فاخر مصنوع يدوياً`;
+  document.getElementById('og-url').setAttribute('content', SITE_CONFIG.SITE_URL + '/');
+  document.getElementById('og-img').setAttribute('content', SITE_CONFIG.SITE_URL + '/og-cover.jpg');
+  document.getElementById('og-title').setAttribute('content', `${SITE_CONFIG.SITE_NAME} — أثاث خشبي فاخر`);
+  document.getElementById('og-sitename').setAttribute('content', SITE_CONFIG.SITE_NAME);
+
+  /* ── صور Unsplash تلقائية ── */
+  const imgs = SITE_CONFIG.IMAGES;
+  const setImg = (sel, url) => {
+    document.querySelectorAll(sel).forEach(el => {
+      if (url) el.style.backgroundImage = `url('${url}')`;
+    });
+  };
+  setImg('#img-hero-main',   imgs.hero_main);
+  setImg('#img-hero-panel',  imgs.hero_panel);
+  setImg('#img-hero-shelf',  imgs.hero_shelf);
+  setImg('#img-hero-banner', imgs.hero_banner);
+  setImg('#img-about',       imgs.about);
+  setImg('#img-card1',       imgs.card1);
+  setImg('#img-card2',       imgs.card2);
+  setImg('#img-card3',       imgs.card3);
+  setImg('#img-card4',       imgs.card4);
+  setImg('#img-card5',       imgs.card5);
+});
+</script>
+
+<!-- ══ WHATSAPP FLOATING BTN ══ -->
+<a id="wa" href="#" class="js-wa" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.38 1.26 4.8L2 22l5.44-1.43a9.86 9.86 0 004.6 1.14c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0012.04 2zm4.52 13.91c-.25-.12-1.47-.72-1.7-.81-.22-.08-.38-.12-.54.12-.16.25-.62.81-.76.97-.14.17-.28.19-.52.06-.25-.12-1.05-.39-2-1.23a7.5 7.5 0 01-1.38-1.72c-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.31s-.84.82-.84 2 .86 2.32.98 2.48c.12.17 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28z"/>
+  </svg>
+  <span class="tip">تواصل معنا</span>
+</a>
+
+<!-- ══ SETUP BADGE (يظهر فقط إذا لم يتم الإعداد) ══ -->
+<button id="setup-badge" onclick="openModal('modal-setup')" aria-label="إعداد سريع">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C28E5C" stroke-width="2" stroke-linecap="round">
+    <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+  </svg>
+  ⚙️ إعداد سريع
+</button>
+
+<!-- ══════════════════════════════════════════
+     MODAL — إعداد سريع للمشتري
+     ══════════════════════════════════════════ -->
+<div id="modal-setup" class="ov" role="dialog" aria-modal="true" aria-labelledby="setup-h">
+  <div class="mb" style="max-width:560px">
+    <button class="mc" onclick="closeModal('modal-setup')" aria-label="إغلاق">✕</button>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+      <div style="width:38px;height:38px;background:#1F2E23;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C28E5C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      </div>
+      <h2 id="setup-h" style="margin:0">🚀 دليل الإعداد السريع</h2>
+    </div>
+    <div class="md"></div>
+
+    <p style="margin-bottom:20px;color:#2B2A28;opacity:.7;font-size:.9rem;line-height:1.7">
+      الموقع يعمل بالكامل الآن. لتشغيله باسمك وربطه بحساباتك، افتح ملف <code style="background:#1F2E23;color:#C28E5C;padding:2px 7px;border-radius:5px;font-size:12px">HTML</code> بأي محرر نصوص (Notepad++ أو VS Code) وعدّل هذه القيم في قسم <strong>SITE_CONFIG</strong>:
+    </p>
+
+    <div style="background:#1F2E23;border-radius:14px;padding:20px 22px;margin-bottom:22px;font-family:monospace;font-size:12.5px;line-height:2;color:#F7F4EE;overflow-x:auto">
+      <span style="color:#6B8C72">// ① اسم علامتك التجارية</span><br>
+      <span style="color:#C28E5C">SITE_NAME:</span> <span style="color:#D4A574">"<span id="prev-name">Onyx &amp; Oak</span>"</span>,<br><br>
+      <span style="color:#6B8C72">// ② رقم واتساب (بدون + أو مسافات)</span><br>
+      <span style="color:#C28E5C">WHATSAPP_NUMBER:</span> <span style="color:#D4A574">"966XXXXXXXXX"</span>,<br><br>
+      <span style="color:#6B8C72">// ③ معرّف Formspree من formspree.io</span><br>
+      <span style="color:#C28E5C">FORMSPREE_ID:</span> <span style="color:#D4A574">"xabcdefg"</span>,<br><br>
+      <span style="color:#6B8C72">// ④ روابط السوشيال ميديا</span><br>
+      <span style="color:#C28E5C">INSTAGRAM_URL:</span> <span style="color:#D4A574">"https://instagram.com/..."</span>,<br><br>
+      <span style="color:#6B8C72">// ⑤ نطاق موقعك</span><br>
+      <span style="color:#C28E5C">SITE_URL:</span> <span style="color:#D4A574">"https://yoursite.com"</span>,
+    </div>
+
+    <h3>🖼️ كيف تغيّر الصور؟</h3>
+    <p style="margin-top:6px">في نفس قسم <strong>SITE_CONFIG</strong>، غيّر روابط الصور في كائن <code style="background:#1F2E23;color:#C28E5C;padding:2px 7px;border-radius:5px;font-size:12px">IMAGES</code>. الروابط الافتراضية هي صور Unsplash احترافية تعمل فوراً. الأبعاد المثالية:</p>
+    <ul style="margin-top:10px">
+      <li><strong>hero_main</strong> — الصورة الرئيسية: 900×675 بكسل</li>
+      <li><strong>card1 – card5</strong> — صور المنتجات: 800×600 بكسل</li>
+      <li><strong>about</strong> — صورة "من نحن" / الورشة: 800×800 بكسل</li>
+    </ul>
+
+    <h3>📤 كيف تنشر الموقع؟</h3>
+    <ul style="margin-top:6px">
+      <li>ارفع ملف HTML مباشرة على <strong>Netlify Drop</strong> (netlify.com/drop) — مجاناً، بدون أي إعداد</li>
+      <li>أو ارفعه على استضافتك العادية داخل مجلد <code style="background:#1F2E23;color:#C28E5C;padding:2px 6px;border-radius:4px;font-size:11px">public_html</code></li>
+    </ul>
+
+    <div style="margin-top:24px;padding:16px;background:rgba(194,142,92,.1);border:1.5px solid rgba(194,142,92,.25);border-radius:12px;display:flex;align-items:center;gap:12px">
+      <span style="font-size:22px">✅</span>
+      <p style="font-size:13px;color:#1F2E23;font-weight:500;margin:0">بعد تعديل هذه القيم الخمس، موقعك جاهز للبيع والنشر الفوري.</p>
+    </div>
+
+    <div style="margin-top:20px;text-align:center">
+      <button onclick="closeModal('modal-setup')" class="b-dark px-8 py-3 rounded-full font-semibold text-sm">
+        فهمت — ابدأ العمل
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL — سياسة الخصوصية ══ -->
+<div id="modal-privacy" class="ov" role="dialog" aria-modal="true" aria-labelledby="priv-h">
+  <div class="mb">
+    <button class="mc" onclick="closeModal('modal-privacy')" aria-label="إغلاق">✕</button>
+    <h2 id="priv-h">سياسة الخصوصية</h2><div class="md"></div>
+    <p>آخر تحديث: يناير ٢٠٢٦ — تُطبَّق هذه السياسة على موقع وخدمات <strong class="js-sitename">Onyx &amp; Oak</strong> المسجّلة في جدة، المملكة العربية السعودية.</p>
+    <h3>١. المعلومات التي نجمعها</h3><p>نجمع المعلومات التي تقدّمها طوعاً عند ملء نموذج عرض السعر أو الاشتراك في النشرة البريدية، وتشمل: الاسم، البريد الإلكتروني، رقم الجوال، ووصف المشروع.</p>
+    <h3>٢. استخدام المعلومات</h3><ul><li>الرد على استفساراتكم وتقديم عروض الأسعار.</li><li>إرسال تحديثات دورية (بموافقتكم فقط).</li><li>تحسين جودة خدماتنا.</li></ul>
+    <h3>٣. مشاركة المعلومات</h3><p>لا نبيع بياناتكم ولا نؤجّرها. قد نشاركها مع مزوّدي خدمات موثوقين (Formspree) حصراً لأغراض تشغيل الخدمة.</p>
+    <h3>٤. حقوقكم</h3><p>يحق لكم: الاطلاع على بياناتكم، تصحيحها، حذفها، أو سحب موافقتكم. للتواصل: <strong>privacy@onyxandoak.sa</strong></p>
+    <h3>٥. الأمن</h3><p>نتبنّى إجراءات أمنية تقنية وتشغيلية لحماية بياناتكم من الوصول غير المصرّح به.</p>
+    <h3>٦. التعديلات</h3><p>قد نحدّث هذه السياسة دورياً مع إشعار واضح على الموقع.</p>
+  </div>
+</div>
+
+<!-- ══ MODAL — شروط الاستخدام ══ -->
+<div id="modal-terms" class="ov" role="dialog" aria-modal="true" aria-labelledby="terms-h">
+  <div class="mb">
+    <button class="mc" onclick="closeModal('modal-terms')" aria-label="إغلاق">✕</button>
+    <h2 id="terms-h">شروط الاستخدام</h2><div class="md"></div>
+    <p>باستخدامك هذا الموقع، فإنك تقبل الالتزام بالشروط التالية الصادرة عن <strong class="js-sitename">Onyx &amp; Oak</strong>، جدة، المملكة العربية السعودية.</p>
+    <h3>١. طبيعة الخدمة</h3><p>يُقدّم الموقع معلومات تعريفية ويتيح طلبات عروض الأسعار. لا يُعدّ إرسال النموذج عقداً ملزماً إلا بعد موافقة خطية رسمية.</p>
+    <h3>٢. الملكية الفكرية</h3><p>جميع المحتويات محمية بموجب قوانين الملكية الفكرية في المملكة العربية السعودية. يُحظر نسخ أي محتوى دون إذن مسبق.</p>
+    <h3>٣. عروض الأسعار والعقود</h3><ul><li>عروض الأسعار صالحة لمدة ثلاثين يوماً.</li><li>تُقبَل الطلبات فور سداد الدفعة الأولى.</li><li>التعديلات بعد بدء التصنيع قد تستلزم تكاليف إضافية.</li></ul>
+    <h3>٤. الضمان والاسترجاع</h3><p>ضمان الهياكل الخشبية لمدة عام كامل من تاريخ التسليم ضد عيوب الصناعة. المنتجات المُصنَّعة بالمواصفات لا تُستردّ إلا عند ثبوت عيب مصنعي.</p>
+    <h3>٥. القانون المختص</h3><p>تخضع هذه الشروط لأنظمة المملكة العربية السعودية. أي نزاع يُحال إلى المحاكم المختصة في جدة.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════ -->
+<header id="hdr" class="fixed top-0 left-0 right-0 z-50 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between gap-6">
+    <a href="#" class="flex items-center gap-2.5 flex-shrink-0" aria-label="الصفحة الرئيسية">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect width="34" height="34" rx="8" fill="#1F2E23"/>
+        <path d="M17 5L17 29M17 12L10 7M17 16L8 12M17 20L9 18M17 12L24 7M17 16L26 12M17 20L25 18" stroke="#C28E5C" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="17" cy="28" rx="5" ry="1.5" fill="#C28E5C" opacity=".4"/>
+      </svg>
+      <span style="font-family:'Playfair Display',serif;font-weight:600;color:#1F2E23;font-size:1.2rem;letter-spacing:-.02em">
+        <span class="js-sitename">Onyx <span style="color:#C28E5C">&</span> Oak</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7" aria-label="التنقل الرئيسي">
+      <a href="#collections" class="nl text-sm font-medium text-charcoal hover:text-oak transition-colors">المجموعات</a>
+      <a href="#about"       class="nl text-sm font-medium text-charcoal hover:text-oak transition-colors">من نحن</a>
+      <a href="#custom"      class="nl text-sm font-medium text-charcoal hover:text-oak transition-colors">التفصيل المخصص</a>
+      <a href="#reviews"     class="nl text-sm font-medium text-charcoal hover:text-oak transition-colors">آراء العملاء</a>
+      <a href="#contact"     class="nl text-sm font-medium text-charcoal hover:text-oak transition-colors">تواصل معنا</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="b-oak hidden sm:inline-block px-5 py-2.5 rounded-full text-sm font-semibold">اطلب عرض سعر</a>
+      <button id="mb-btn" class="md:hidden p-2 rounded-lg hover:bg-oak/10 transition" aria-label="القائمة" aria-expanded="false">
+        <svg id="mi" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#1F2E23" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg id="ci2" class="hidden" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 4l14 14M18 4L4 18" stroke="#1F2E23" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mm" class="md:hidden bg-cream border-t border-oak/10">
+    <nav class="flex flex-col px-5 py-4 gap-1">
+      <a href="#collections" class="mob py-2.5 text-sm font-medium text-charcoal border-b border-oak/10">المجموعات</a>
+      <a href="#about"       class="mob py-2.5 text-sm font-medium text-charcoal border-b border-oak/10">من نحن</a>
+      <a href="#custom"      class="mob py-2.5 text-sm font-medium text-charcoal border-b border-oak/10">التفصيل المخصص</a>
+      <a href="#reviews"     class="mob py-2.5 text-sm font-medium text-charcoal border-b border-oak/10">آراء العملاء</a>
+      <a href="#contact"     class="mob py-2.5 text-sm font-medium text-charcoal">تواصل معنا</a>
+      <a href="#contact" class="b-oak mt-3 block text-center px-5 py-2.5 rounded-full text-sm font-semibold">اطلب عرض سعر</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════ -->
+<section class="pt-28 md:pt-32 pb-20 md:pb-28 px-5 lg:px-8 max-w-7xl mx-auto">
+  <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="rv">
+      <p class="text-oak font-medium text-sm tracking-widest uppercase mb-5">تأسست ٢٠١٨ · جدة، المملكة العربية السعودية</p>
+      <h1 style="font-family:'Playfair Display',serif" class="text-4xl sm:text-5xl xl:text-6xl leading-tight text-forest mb-6">
+        أعمال خشبية<br><em class="text-oak italic">مصنوعة يدوياً</em><br>لمساحات عصرية راقية
+      </h1>
+      <p class="text-base md:text-lg text-charcoal/70 leading-relaxed mb-9 font-light max-w-md">كل قطعة تبدأ من لوحة خشبية واحدة وتنتهي تحفةً فنية — تشكّلها أيدي حرفيين مهرة يؤمنون بأن المنزل يستحق أكثر من مجرد أثاث.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#collections" class="b-dark px-7 py-3.5 rounded-full font-semibold text-sm">استعرض المجموعات</a>
+        <a href="#custom"      class="b-out  px-7 py-3.5 rounded-full font-semibold text-sm">اطلب تصميماً مخصصاً</a>
+      </div>
+      <div class="mt-10 flex items-center gap-6 flex-wrap">
+        <div class="flex items-center gap-2"><svg width="15" height="15" viewBox="0 0 16 16" fill="#C28E5C" aria-hidden="true"><path d="M8 1l1.8 3.6L14 5.4l-3 2.9.7 4.1L8 10.3l-3.7 2.1.7-4.1L2 5.4l4.2-.8L8 1z"/></svg><span class="text-xs font-medium text-charcoal/60">تقييم ٤.٩ / ٥</span></div>
+        <div class="w-px h-4 bg-charcoal/20 hidden sm:block"></div>
+        <span class="text-xs font-medium text-charcoal/60">+٣٢٠ مشروع مُنجز</span>
+        <div class="w-px h-4 bg-charcoal/20 hidden sm:block"></div>
+        <span class="text-xs font-medium text-charcoal/60">١٠٠٪ خشب مستدام</span>
+      </div>
+    </div>
+
+    <!-- IMAGE GRID -->
+    <div class="rv grid grid-cols-2 gap-3 lg:gap-4" style="transition-delay:.15s">
+      <div class="col-span-2 relative rounded-2xl overflow-hidden gr aspect-[16/9] lg:aspect-[4/3]">
+        <div id="img-hero-main" class="wa slot ci"></div>
+        <div class="absolute inset-0 flex flex-col justify-end p-5 bg-gradient-to-t from-forest/65 to-transparent z-10">
+          <span class="text-cream text-xs font-medium">طاولة السفرة المميزة</span>
+          <span class="text-cream/60 text-[11px] mt-0.5">خشب الجوز الأمريكي الأسود</span>
+        </div>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden gr aspect-square">
+        <div id="img-hero-panel" class="wb slot ci"></div>
+        <div class="absolute bottom-3 right-3 z-10"><span class="text-cream text-[11px] font-medium bg-forest/55 px-2 py-1 rounded-full">ألواح جدارية</span></div>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden gr aspect-square">
+        <div id="img-hero-shelf" class="wc slot ci"></div>
+        <div class="absolute bottom-3 right-3 z-10"><span class="text-cream text-[11px] font-medium bg-forest/55 px-2 py-1 rounded-full">وحدة أرفف</span></div>
+      </div>
+      <div class="col-span-2 relative rounded-2xl overflow-hidden gr h-28">
+        <div id="img-hero-banner" class="wd slot ci"></div>
+        <div class="absolute inset-0 flex items-center justify-between px-5 z-10">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" stroke="#C28E5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-cream text-xs font-medium">خشب البلوط المعاد تدويره · مجموعة الحواف الطبيعية</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST STRIP ══ -->
+<section class="bg-forest py-12 px-5 lg:px-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="rv flex flex-col sm:flex-row items-start sm:items-center gap-4"><div class="ficon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L8 8H2l4.5 4-2 6L12 15l7.5 5-2-6L22 8h-6L12 2z" stroke="#C28E5C" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div><p class="text-cream font-semibold text-sm">١٠٠٪ خشب مستدام</p><p class="text-cream/50 text-xs mt-0.5 font-light">معتمد دولياً FSC</p></div></div>
+    <div class="rv flex flex-col sm:flex-row items-start sm:items-center gap-4" style="transition-delay:.08s"><div class="ficon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#C28E5C" stroke-width="1.5"/><path d="M9 9h6M9 12h6M9 15h4" stroke="#C28E5C" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><p class="text-cream font-semibold text-sm">هندسة تفصيل مخصصة</p><p class="text-cream/50 text-xs mt-0.5 font-light">مصنوع وفق مواصفاتك</p></div></div>
+    <div class="rv flex flex-col sm:flex-row items-start sm:items-center gap-4" style="transition-delay:.16s"><div class="ficon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 12l3 3 7-7" stroke="#C28E5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#C28E5C" stroke-width="1.5"/></svg></div><div><p class="text-cream font-semibold text-sm">تشطيب يدوي فاخر</p><p class="text-cream/50 text-xs mt-0.5 font-light">تفاصيل حرفية في كل سطح</p></div></div>
+    <div class="rv flex flex-col sm:flex-row items-start sm:items-center gap-4" style="transition-delay:.24s"><div class="ficon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 19V5" stroke="#C28E5C" stroke-width="1.5" stroke-linecap="round"/><path d="M16 21c0-2.2-1.8-4-4-4s-4 1.8-4 4" stroke="#C28E5C" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><p class="text-cream font-semibold text-sm">توصيل وتركيب احترافي</p><p class="text-cream/50 text-xs mt-0.5 font-light">لا نُسلِّم فحسب، نُركِّب</p></div></div>
+  </div>
+</section>
+
+<!-- ══ COLLECTIONS ══ -->
+<section id="collections" class="py-20 md:py-28 px-5 lg:px-8 max-w-7xl mx-auto">
+  <div class="rv mb-14 text-center">
+    <p class="text-oak text-sm font-medium tracking-widest uppercase mb-3">كتالوجنا</p>
+    <h2 style="font-family:'Playfair Display',serif" class="text-3xl md:text-5xl text-forest leading-tight mb-4">المجموعات المميزة</h2>
+    <div class="divider mx-auto mb-5"></div>
+    <p class="text-charcoal/60 max-w-xl mx-auto text-base font-light leading-relaxed">كل قطعة متاحة بطيف من أنواع الخشب والتشطيبات — أو يمكن إعادة تصورها عبر خدمة التفصيل المخصص.</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+    <!-- Card 1 -->
+    <article class="pc rv bg-white rounded-2xl overflow-hidden shadow-sm border border-oak/10 flex flex-col">
+      <div class="overflow-hidden aspect-[4/3] relative gr"><div id="img-card1" class="wa slot ci"></div><span class="absolute top-4 right-4 bg-forest text-cream text-[11px] font-semibold px-3 py-1 rounded-full z-10">الأكثر طلباً</span></div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 style="font-family:'Playfair Display',serif" class="text-lg text-forest font-semibold mb-1">طاولة السفرة بالحواف الطبيعية</h3>
+        <p class="text-charcoal/60 text-sm leading-relaxed mb-4 font-light flex-1">خشب الجوز الأمريكي الأسود مُسوَّى يدوياً مع الحفاظ على الحواف الطبيعية. تتسع لـ٦–١٠ أشخاص.</p>
+        <div class="flex items-end justify-between mt-auto pt-4 border-t border-oak/10">
+          <div><p class="text-xs text-charcoal/40 font-medium uppercase tracking-wide">يبدأ من</p><p style="font-family:'Playfair Display',serif" class="text-xl text-forest font-bold">٨٬٤٠٠ ر.س</p></div>
+          <a href="#contact" class="b-oak px-5 py-2 rounded-full text-xs font-semibold">استفسر الآن</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="pc rv bg-white rounded-2xl overflow-hidden shadow-sm border border-oak/10 flex flex-col" style="transition-delay:.08s">
+      <div class="overflow-hidden aspect-[4/3] relative gr"><div id="img-card2" class="wb slot ci"></div></div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 style="font-family:'Playfair Display',serif" class="text-lg text-forest font-semibold mb-1">ألواح جدارية عائمة</h3>
+        <p class="text-charcoal/60 text-sm leading-relaxed mb-4 font-light flex-1">ألواح بلوط أبيض نمطية بوصلات مُفرَّزة دقيقة، متوفرة بتصاميم هيرينجبون أو خطية أو هندسية مخصصة.</p>
+        <div class="flex items-end justify-between mt-auto pt-4 border-t border-oak/10">
+          <div><p class="text-xs text-charcoal/40 font-medium uppercase tracking-wide">يبدأ من</p><p style="font-family:'Playfair Display',serif" class="text-xl text-forest font-bold">٢٬٢٠٠ ر.س <span class="text-sm font-normal text-charcoal/40">/م²</span></p></div>
+          <a href="#contact" class="b-oak px-5 py-2 rounded-full text-xs font-semibold">استفسر الآن</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="pc rv bg-white rounded-2xl overflow-hidden shadow-sm border border-oak/10 flex flex-col" style="transition-delay:.16s">
+      <div class="overflow-hidden aspect-[4/3] relative gr"><div id="img-card3" class="wc slot ci"></div><span class="absolute top-4 right-4 bg-oak text-white text-[11px] font-semibold px-3 py-1 rounded-full z-10">وصل حديثاً</span></div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 style="font-family:'Playfair Display',serif" class="text-lg text-forest font-semibold mb-1">أرفف البلوط المعاد تدويره</h3>
+        <p class="text-charcoal/60 text-sm leading-relaxed mb-4 font-light flex-1">ألواح خشب معاد تدويره مع قواعد حديدية مطروقة. يحمل كل لوح تفرّد حبوب الخشب الطبيعي.</p>
+        <div class="flex items-end justify-between mt-auto pt-4 border-t border-oak/10">
+          <div><p class="text-xs text-charcoal/40 font-medium uppercase tracking-wide">يبدأ من</p><p style="font-family:'Playfair Display',serif" class="text-xl text-forest font-bold">١٬٦٠٠ ر.س</p></div>
+          <a href="#contact" class="b-oak px-5 py-2 rounded-full text-xs font-semibold">استفسر الآن</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="pc rv bg-white rounded-2xl overflow-hidden shadow-sm border border-oak/10 flex flex-col" style="transition-delay:.04s">
+      <div class="overflow-hidden aspect-[4/3] relative gr"><div id="img-card4" class="wd slot ci"></div></div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 style="font-family:'Playfair Display',serif" class="text-lg text-forest font-semibold mb-1">نظام خزانة غرفة النوم</h3>
+        <p class="text-charcoal/60 text-sm leading-relaxed mb-4 font-light flex-1">خزانة من الأرض للسقف بخشب البلوط المدخّن، مع إضاءة LED مدمجة وآليات إغلاق صامتة.</p>
+        <div class="flex items-end justify-between mt-auto pt-4 border-t border-oak/10">
+          <div><p class="text-xs text-charcoal/40 font-medium uppercase tracking-wide">يبدأ من</p><p style="font-family:'Playfair Display',serif" class="text-xl text-forest font-bold">١٤٬٨٠٠ ر.س</p></div>
+          <a href="#contact" class="b-oak px-5 py-2 rounded-full text-xs font-semibold">استفسر الآن</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="pc rv bg-white rounded-2xl overflow-hidden shadow-sm border border-oak/10 flex flex-col" style="transition-delay:.12s">
+      <div class="overflow-hidden aspect-[4/3] relative gr"><div id="img-card5" class="we slot ci"></div></div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 style="font-family:'Playfair Display',serif" class="text-lg text-forest font-semibold mb-1">طاولة قهوة حرفية</h3>
+        <p class="text-charcoal/60 text-sm leading-relaxed mb-4 font-light flex-1">سطح خشب تيك صلب على أرجل نحاسية مُلمَّعة يدوياً. تحفة تُضفي هيبةً هادئة على أي غرفة معيشة.</p>
+        <div class="flex items-end justify-between mt-auto pt-4 border-t border-oak/10">
+          <div><p class="text-xs text-charcoal/40 font-medium uppercase tracking-wide">يبدأ من</p><p style="font-family:'Playfair Display',serif" class="text-xl text-forest font-bold">٣٬٢٠٠ ر.س</p></div>
+          <a href="#contact" class="b-oak px-5 py-2 rounded-full text-xs font-semibold">استفسر الآن</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 6 CTA -->
+    <article class="pc rv bg-forest rounded-2xl flex flex-col items-center justify-center p-10 text-center min-h-64" style="transition-delay:.2s">
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" class="mb-5 opacity-60" aria-hidden="true"><circle cx="22" cy="22" r="20" stroke="#C28E5C" stroke-width="1.5"/><path d="M22 14v16M14 22h16" stroke="#C28E5C" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <h3 style="font-family:'Playfair Display',serif" class="text-xl text-cream font-semibold mb-3">لم تجد ما تبحث عنه؟</h3>
+      <p class="text-cream/50 text-sm font-light mb-7 leading-relaxed">كل مساحة مختلفة. أخبرنا برؤيتك وسنُصمّمها من الصفر.</p>
+      <a href="#custom" class="b-oak-o px-6 py-2.5 rounded-full text-sm font-semibold">ابدأ تصميماً مخصصاً</a>
+    </article>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="bg-white py-20 md:py-28 px-5 lg:px-8">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <div class="rv order-2 lg:order-1">
+      <p class="text-oak text-sm font-medium tracking-widest uppercase mb-3">قصتنا</p>
+      <h2 style="font-family:'Playfair Display',serif" class="text-3xl md:text-4xl text-forest leading-tight mb-5">خشب يحمل تاريخاً</h2>
+      <div class="divider mb-7"></div>
+      <p class="text-charcoal/70 leading-relaxed mb-5 font-light">تأسست <span class="js-sitename font-semibold">Onyx & Oak</span> في جدة عام ٢٠١٨ على يد فريق من المعماريين والنجارين المهرة. نختار كل لوحة خشبية بعناية — نُسافر إلى غابات مستدامة في جنوب شرق آسيا وأوروبا وأمريكا الشمالية — ثم نُعيدها إلى ورشتنا حيث تُقاس وتُقطع وتُشطَّب يدوياً.</p>
+      <p class="text-charcoal/70 leading-relaxed mb-8 font-light">فلسفتنا: لا يُرغَم الخشب أبداً. له حبوبه وذاكرته واتجاهه الخاص. دورنا هو الإنصات والتوجيه.</p>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="text-center p-4 bg-cream rounded-xl"><p style="font-family:'Playfair Display',serif" class="text-3xl text-forest font-bold">+٣٢٠</p><p class="text-xs text-charcoal/50 mt-1 font-medium">مشروع مُنجز</p></div>
+        <div class="text-center p-4 bg-cream rounded-xl"><p style="font-family:'Playfair Display',serif" class="text-3xl text-forest font-bold">+١٢</p><p class="text-xs text-charcoal/50 mt-1 font-medium">نوع خشب</p></div>
+        <div class="text-center p-4 bg-cream rounded-xl"><p style="font-family:'Playfair Display',serif" class="text-3xl text-forest font-bold">٦ سنوات</p><p class="text-xs text-charcoal/50 mt-1 font-medium">خبرة مُثبتة</p></div>
+      </div>
+    </div>
+    <div class="rv order-1 lg:order-2 relative" style="transition-delay:.12s">
+      <div class="aspect-square rounded-2xl overflow-hidden gr relative">
+        <div id="img-about" class="wa slot"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-forest/45 to-transparent z-10"></div>
+        <div class="absolute bottom-8 right-8 left-8 z-20">
+          <blockquote style="font-family:'Playfair Display',serif" class="italic text-cream/90 text-lg leading-snug">"الخشب يتذكر كل فصل عاشه — وعملنا أن نُكرم تلك الذاكرة."</blockquote>
+          <p class="text-cream/50 text-sm mt-3 font-light">— المؤسس، <span class="js-sitename">Onyx & Oak</span></p>
+        </div>
+      </div>
+      <div class="absolute -top-5 -left-5 w-20 h-20 bg-oak rounded-full flex items-center justify-center shadow-lg">
+        <div class="text-center"><p style="font-family:'Playfair Display',serif" class="text-white font-bold text-lg leading-none">١٠٠٪</p><p class="text-white/80 text-[9px] font-medium mt-0.5">مستدام</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CUSTOM ENGINEERING ══ -->
+<section id="custom" class="py-20 md:py-28 px-5 lg:px-8 bg-cream">
+  <div class="max-w-7xl mx-auto">
+    <div class="rv text-center mb-14">
+      <p class="text-oak text-sm font-medium tracking-widest uppercase mb-3">التفصيل المخصص</p>
+      <h2 style="font-family:'Playfair Display',serif" class="text-3xl md:text-5xl text-forest leading-tight mb-4">دقة صناعية<br class="hidden sm:block"> بروح حرفية</h2>
+      <div class="divider mx-auto mb-5"></div>
+      <p class="text-charcoal/60 max-w-2xl mx-auto font-light leading-relaxed">ورشتنا تمزج بين أحدث مخارط CNC وأسطح مُسوَّاة يدوياً — لأن الدقة والدفء ليسا نقيضين.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rv bg-white rounded-2xl p-8 border border-oak/10">
+        <div class="w-12 h-12 bg-forest rounded-xl flex items-center justify-center mb-5"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="18" height="18" rx="2" stroke="#C28E5C" stroke-width="1.3"/><path d="M7 7h8M7 11h8M7 15h5" stroke="#C28E5C" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif" class="text-lg text-forest font-semibold mb-3">٠١ — استشارة التصميم</h3>
+        <p class="text-charcoal/60 text-sm font-light leading-relaxed">نبدأ بجلسة استشارية تفصيلية — نفهم مساحتك وأسلوب حياتك وذوقك قبل رسم أي خط.</p>
+      </div>
+      <div class="rv bg-white rounded-2xl p-8 border border-oak/10" style="transition-delay:.1s">
+        <div class="w-12 h-12 bg-forest rounded-xl flex items-center justify-center mb-5"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="#C28E5C" stroke-width="1.3"/><path d="M11 7v4l3 3" stroke="#C28E5C" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif" class="text-lg text-forest font-semibold mb-3">٠٢ — الهندسة والنمذجة</h3>
+        <p class="text-charcoal/60 text-sm font-light leading-relaxed">رسومات CAD وعيّنات الخامات. نُنمذج تفاصيل الوصلات قبل الالتزام بالخشب النهائي.</p>
+      </div>
+      <div class="rv bg-white rounded-2xl p-8 border border-oak/10" style="transition-delay:.2s">
+        <div class="w-12 h-12 bg-forest rounded-xl flex items-center justify-center mb-5"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M19 11H3M11 19l-8-8 8-8" stroke="#C28E5C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif" class="text-lg text-forest font-semibold mb-3">٠٣ — التصنيع والتركيب</h3>
+        <p class="text-charcoal/60 text-sm font-light leading-relaxed">فريقنا يُشطّب كل قطعة يدوياً — صنفرة عبر خمس درجات وزيوت طبيعية — ثم يُركّبها في موقعك.</p>
+      </div>
+    </div>
+    <div class="rv mt-10 bg-forest rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 justify-between" style="transition-delay:.1s">
+      <div>
+        <h3 style="font-family:'Playfair Display',serif" class="text-2xl md:text-3xl text-cream font-semibold mb-3">مستعد لتكليفنا بشيء استثنائي؟</h3>
+        <p class="text-cream/50 font-light text-sm max-w-xl">مدد التسليم: ٤–١٠ أسابيع حسب التعقيد. نُطلعك على كل مرحلة أولاً بأول.</p>
+      </div>
+      <a href="#contact" class="b-oak flex-shrink-0 px-8 py-3.5 rounded-full font-semibold text-sm whitespace-nowrap">ابدأ مشروعك</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="reviews" class="py-20 md:py-28 px-5 lg:px-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="rv text-center mb-14">
+      <p class="text-oak text-sm font-medium tracking-widest uppercase mb-3">آراء العملاء</p>
+      <h2 style="font-family:'Playfair Display',serif" class="text-3xl md:text-4xl text-forest leading-tight mb-4">ماذا يقول عملاؤنا</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rv tc bg-cream rounded-2xl p-7 flex flex-col">
+        <div class="stars mb-4">★★★★★</div>
+        <blockquote style="font-family:'Playfair Display',serif" class="italic text-forest text-base leading-relaxed flex-1 mb-6">"طاولة السفرة حوّلت منزلنا كاملاً. يسأل عنها كل زائر. تستحق كل ريال — جودة الصناعة لا مثيل لها."</blockquote>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-forest flex items-center justify-center text-cream text-xs font-bold">ن.أ</div><div><p class="font-semibold text-charcoal text-sm">نورة الأحمدي</p><p class="text-charcoal/40 text-xs">مصممة داخلية، جدة</p></div></div>
+      </div>
+      <div class="rv tc bg-cream rounded-2xl p-7 flex flex-col" style="transition-delay:.1s">
+        <div class="stars mb-4">★★★★★</div>
+        <blockquote style="font-family:'Playfair Display',serif" class="italic text-forest text-base leading-relaxed flex-1 mb-6">"كلّفتهم بنظام خزانة كامل. الفريق دقيق وتواصله ممتاز، والتشطيب النهائي لا تشوبه شائبة."</blockquote>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-oak flex items-center justify-center text-white text-xs font-bold">خ.م</div><div><p class="font-semibold text-charcoal text-sm">خالد المطيري</p><p class="text-charcoal/40 text-xs">مطوّر عقاري، الرياض</p></div></div>
+      </div>
+      <div class="rv tc bg-cream rounded-2xl p-7 flex flex-col" style="transition-delay:.2s">
+        <div class="stars mb-4">★★★★★</div>
+        <blockquote style="font-family:'Playfair Display',serif" class="italic text-forest text-base leading-relaxed flex-1 mb-6">"جهّزنا لوبي فندقنا بالكامل. النتيجة يُصوّرها الضيوف قبل أن يُسجّلوا الوصول."</blockquote>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-forest flex items-center justify-center text-cream text-xs font-bold">ل.ح</div><div><p class="font-semibold text-charcoal text-sm">ليلى حسان</p><p class="text-charcoal/40 text-xs">مديرة ضيافة، الدمام</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT FORM ══ -->
+<section id="contact" class="py-20 md:py-28 px-5 lg:px-8 bg-cream">
+  <div class="max-w-3xl mx-auto">
+    <div class="rv text-center mb-12">
+      <p class="text-oak text-sm font-medium tracking-widest uppercase mb-3">تواصل معنا</p>
+      <h2 style="font-family:'Playfair Display',serif" class="text-3xl md:text-4xl text-forest leading-tight mb-4">اطلب عرض سعر</h2>
+      <div class="divider mx-auto mb-5"></div>
+      <p class="text-charcoal/60 font-light">أخبرنا عن مشروعك وسنردّ خلال ٢٤ ساعة.</p>
+    </div>
+    <form id="quote-form" class="rv bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-oak/10 space-y-5" method="POST">
+      <input type="hidden" name="_subject" value="طلب عرض سعر جديد"/>
+      <input type="hidden" name="_language" value="ar"/>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="block text-xs font-semibold text-charcoal/60 uppercase tracking-wide mb-1.5" for="fn">الاسم الكامل</label>
+          <input id="fn" name="name" type="text" placeholder="سارة الراشد" class="w-full bg-cream rounded-xl px-4 py-3 text-sm text-charcoal placeholder-charcoal/30 border border-oak/20" required/>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-charcoal/60 uppercase tracking-wide mb-1.5" for="fe">البريد الإلكتروني</label>
+          <input id="fe" name="email" type="email" placeholder="sara@example.com" class="w-full bg-cream rounded-xl px-4 py-3 text-sm text-charcoal placeholder-charcoal/30 border border-oak/20" required/>
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-charcoal/60 uppercase tracking-wide mb-1.5" for="fp">رقم الجوال (واتساب)</label>
+        <input id="fp" name="phone" type="tel" placeholder="+966 5X XXX XXXX" class="w-full bg-cream rounded-xl px-4 py-3 text-sm text-charcoal placeholder-charcoal/30 border border-oak/20"/>
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-charcoal/60 uppercase tracking-wide mb-1.5" for="ft">نوع المشروع</label>
+        <select id="ft" name="project_type" class="w-full bg-cream rounded-xl px-4 py-3 text-sm text-charcoal border border-oak/20 cursor-pointer">
+          <option value="">اختر تصنيفاً...</option>
+          <option>أثاث سفرة</option><option>ألواح جدارية</option><option>أرفف وتخزين</option>
+          <option>خزانات غرف النوم</option><option>مشاريع فندقية / تجارية</option>
+          <option>باقة ديكور متكاملة</option><option>أخرى / مخصص</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-charcoal/60 uppercase tracking-wide mb-1.5" for="fm">تفاصيل مشروعك</label>
+        <textarea id="fm" name="message" rows="4" placeholder="صف مساحتك، نوع الخشب المفضل، الأبعاد، الميزانية، والمهلة الزمنية..." class="w-full bg-cream rounded-xl px-4 py-3 text-sm text-charcoal placeholder-charcoal/30 border border-oak/20 resize-none"></textarea>
+      </div>
+      <button type="submit" id="sub-btn" class="b-dark w-full py-3.5 rounded-full font-semibold text-sm tracking-wide">إرسال الطلب</button>
+      <div id="f-ok"  class="hidden text-center text-sm font-semibold text-forest bg-oak/10 rounded-xl py-4 px-5 border border-oak/20">✓ شكراً لك! استلمنا طلبك وسنتواصل معك خلال ٢٤ ساعة.</div>
+      <div id="f-err" class="hidden text-center text-sm font-medium text-red-700 bg-red-50 rounded-xl py-4 px-5 border border-red-200">✕ حدث خطأ. يرجى المحاولة مجدداً أو التواصل عبر واتساب.</div>
+    </form>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="bg-forest text-cream/80 pt-16 pb-8 px-5 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+      <div class="sm:col-span-2 lg:col-span-1">
+        <div class="flex items-center gap-2.5 mb-5">
+          <svg width="30" height="30" viewBox="0 0 34 34" fill="none"><rect width="34" height="34" rx="8" fill="#C28E5C" fill-opacity=".18"/><path d="M17 5L17 29M17 12L10 7M17 16L8 12M17 20L9 18M17 12L24 7M17 16L26 12M17 20L25 18" stroke="#C28E5C" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="font-family:'Playfair Display',serif;font-weight:600;color:#F7F4EE;font-size:1.1rem"><span class="js-sitename">Onyx <span style="color:#C28E5C">&</span> Oak</span></span>
+        </div>
+        <p class="text-cream/50 text-sm font-light leading-relaxed max-w-xs">نصنع أثاثاً خشبياً فاخراً وأعمالاً معمارية من ورشتنا في جدة منذ عام ٢٠١٨.</p>
+        <div class="flex gap-3 mt-6">
+          <a href="#" class="js-instagram w-9 h-9 rounded-lg bg-white/5 hover:bg-oak/30 flex items-center justify-center transition" aria-label="إنستغرام" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#C28E5C" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="#C28E5C" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#C28E5C"/></svg>
+          </a>
+          <a href="#" class="js-snapchat w-9 h-9 rounded-lg bg-white/5 hover:bg-oak/30 flex items-center justify-center transition" aria-label="سناب شات" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.5 2 6 4.5 6 8v1.5c0 .5-.3 1-.8 1.2-.3.2-.4.5-.3.8.1.3.5.6.9.7.4.1.9.2 1.3.5.3.2.5.6.5 1 0 .4-.4.8-.9.8H6.3c-.2 0-.4.2-.4.4 0 .2.1.4.3.5.5.2 1 .4 1.3.8.3.4.6 1 .7 1.6 0 .2.2.3.4.3.3 0 .5-.1.8-.2.4-.2.8-.3 1.3-.3.3 0 .6 0 .9.1.4.2.9.4 1.4.4s1-.2 1.4-.4c.3-.1.6-.1.9-.1.5 0 .9.1 1.3.3.2.1.5.2.8.2.2 0 .4-.1.4-.3.1-.6.4-1.2.7-1.6.3-.4.8-.6 1.3-.8.2-.1.3-.3.3-.5 0-.2-.2-.4-.4-.4h-.3c-.5 0-.9-.4-.9-.8 0-.4.2-.8.5-1 .4-.3.9-.4 1.3-.5.4-.1.8-.4.9-.7.1-.3 0-.6-.3-.8-.5-.2-.8-.7-.8-1.2V8c0-3.5-2.5-6-6-6z" stroke="#C28E5C" stroke-width="1.2"/></svg>
+          </a>
+          <a href="#" class="js-twitter w-9 h-9 rounded-lg bg-white/5 hover:bg-oak/30 flex items-center justify-center transition" aria-label="X / تويتر" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#C28E5C"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="js-wa w-9 h-9 rounded-lg bg-white/5 hover:bg-oak/30 flex items-center justify-center transition" aria-label="واتساب" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C28E5C"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.38 1.26 4.8L2 22l5.44-1.43a9.86 9.86 0 004.6 1.14c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0012.04 2zm4.52 13.91c-.25-.12-1.47-.72-1.7-.81-.22-.08-.38-.12-.54.12-.16.25-.62.81-.76.97-.14.17-.28.19-.52.06-.25-.12-1.05-.39-2-1.23a7.5 7.5 0 01-1.38-1.72c-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.31s-.84.82-.84 2 .86 2.32.98 2.48c.12.17 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-cream text-sm font-semibold uppercase tracking-widest mb-5">روابط سريعة</h4>
+        <ul class="space-y-3 text-sm font-light">
+          <li><a href="#collections" class="text-cream/50 hover:text-oak transition">المجموعات</a></li>
+          <li><a href="#about"       class="text-cream/50 hover:text-oak transition">من نحن</a></li>
+          <li><a href="#custom"      class="text-cream/50 hover:text-oak transition">التفصيل المخصص</a></li>
+          <li><a href="#reviews"     class="text-cream/50 hover:text-oak transition">آراء العملاء</a></li>
+          <li><a href="#contact"     class="text-cream/50 hover:text-oak transition">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-cream text-sm font-semibold uppercase tracking-widest mb-5">خدماتنا</h4>
+        <ul class="space-y-3 text-sm font-light">
+          <li><a href="#contact" class="text-cream/50 hover:text-oak transition">أثاث سكني</a></li>
+          <li><a href="#contact" class="text-cream/50 hover:text-oak transition">ألواح جدارية</a></li>
+          <li><a href="#contact" class="text-cream/50 hover:text-oak transition">مطابخ خشبية</a></li>
+          <li><a href="#contact" class="text-cream/50 hover:text-oak transition">مشاريع فندقية</a></li>
+          <li><a href="#contact" class="text-cream/50 hover:text-oak transition">ديكور مكاتب</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-cream text-sm font-semibold uppercase tracking-widest mb-5">ابقَ مُلهَماً</h4>
+        <p class="text-cream/50 text-sm font-light mb-4">قصص مشاريع وأدلة الخشب والمجموعات الجديدة — شهرياً.</p>
+        <div class="flex flex-col gap-2">
+          <input type="email" placeholder="بريدك@مثال.com" class="bg-white/10 rounded-xl px-4 py-2.5 text-sm text-cream placeholder-cream/30 border border-white/10 focus:border-oak focus:outline-none text-right"/>
+          <button class="b-oak px-4 py-2.5 rounded-xl text-sm font-semibold">اشترك الآن</button>
+        </div>
+        <p class="text-cream/30 text-xs mt-3 font-light">لا رسائل مزعجة — إطلاقاً.</p>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-cream/30 text-xs font-light">© ٢٠٢٦ <span class="js-sitename">Onyx &amp; Oak</span> · جميع الحقوق محفوظة · جدة، المملكة العربية السعودية</p>
+      <div class="flex gap-5 text-xs text-cream/30 font-light">
+        <button onclick="openModal('modal-privacy')" class="hover:text-oak transition bg-transparent border-none cursor-pointer p-0 text-cream/30 text-xs" style="font-family:'Tajawal',sans-serif">سياسة الخصوصية</button>
+        <button onclick="openModal('modal-terms')"   class="hover:text-oak transition bg-transparent border-none cursor-pointer p-0 text-cream/30 text-xs" style="font-family:'Tajawal',sans-serif">شروط الاستخدام</button>
+        <a href="#" class="hover:text-oak transition">خريطة الموقع</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════════ -->
+<script>
+/* ── Header scroll ── */
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('up', scrollY > 20), {passive:true});
+
+/* ── Mobile menu ── */
+const mbBtn = document.getElementById('mb-btn');
+const mm    = document.getElementById('mm');
+const mi    = document.getElementById('mi');
+const ci2   = document.getElementById('ci2');
+mbBtn.addEventListener('click', () => {
+  const o = mm.classList.toggle('open');
+  mbBtn.setAttribute('aria-expanded', o);
+  mi.classList.toggle('hidden', o);
+  ci2.classList.toggle('hidden', !o);
+});
+document.querySelectorAll('.mob, #mm a').forEach(l => l.addEventListener('click', () => {
+  mm.classList.remove('open');
+  mbBtn.setAttribute('aria-expanded','false');
+  mi.classList.remove('hidden');
+  ci2.classList.add('hidden');
+}));
+
+/* ── Reveal on scroll ── */
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)} });
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ── Formspree AJAX ── */
+const form   = document.getElementById('quote-form');
+const subBtn = document.getElementById('sub-btn');
+const fOk    = document.getElementById('f-ok');
+const fErr   = document.getElementById('f-err');
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if(!form.action || form.action.includes('YOUR_FORM_ID')) {
+    alert('⚠️ لم يتم ضبط FORMSPREE_ID بعد.\nافتح SITE_CONFIG في أعلى الملف وأدخل معرّف Formspree الخاص بك.');
+    return;
+  }
+  subBtn.disabled = true;
+  subBtn.innerHTML = '<span class="spin"></span>جارٍ الإرسال...';
+  fOk.classList.add('hidden'); fErr.classList.add('hidden');
+  try {
+    const r = await fetch(form.action, {method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(r.ok){ subBtn.classList.add('hidden'); fOk.classList.remove('hidden'); form.reset(); }
+    else throw 0;
+  } catch {
+    subBtn.disabled = false;
+    subBtn.innerHTML = 'إرسال الطلب';
+    fErr.classList.remove('hidden');
+  }
+});
+
+/* ── Modals ── */
+function openModal(id){
+  const el = document.getElementById(id);
+  el.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  const ov = e => { if(e.target===el){closeModal(id);el.removeEventListener('click',ov)} };
+  const esc = e => { if(e.key==='Escape'){closeModal(id);document.removeEventListener('keydown',esc)} };
+  el.addEventListener('click',ov);
+  document.addEventListener('keydown',esc);
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow='';
+}
+
+/* ── Hide setup badge after first interaction ── */
+const badge = document.getElementById('setup-badge');
+document.querySelectorAll('#quote-form input, #quote-form textarea').forEach(el => {
+  el.addEventListener('focus', () => badge.style.opacity = '0.3', {once:true});
+});
+</script>
+</body>
+</html>
